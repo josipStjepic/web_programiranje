@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 2</title>
+</head>
+<body>
+    <h1><a href="zadatak1_stjepić.html">OBRAZAC</a></h1>
+    
+    <form>
+        <div>
+            <label for="korisnicko_ime">Korisničko ime:</label><br>
+            <input type="text" id="korisnicko_ime" name="korisnicko_ime" size="15" placeholder="Unesite korisničko ime">
+        </div>
+        <br>
+        
+        <div>
+            <label for="lozinka">Lozinka:</label><br>
+            <input type="password" id="lozinka" name="lozinka" size="15" placeholder="Unesite lozinku">
+        </div>
+        <br>
+        
+        <div>
+            <label for="ocjena">Ocjena:</label><br>
+            <select id="ocjena" name="ocjena">
+                <option value="nedovoljan">Nedovoljan</option>
+                <option value="dovoljan">Dovoljan</option>
+                <option value="dobar">Dobar</option>
+                <option value="vrlodobar">Vrlodobar</option>
+                <option value="izvrstan">Izvrstan</option>
+            </select>
+        </div>
+        <br>
+        
+        <div>
+            <label for="komentar">Komentar:</label><br>
+            <textarea id="komentar" name="komentar" rows="7" cols="40" placeholder="Unesite vaš komentar"></textarea>
+        </div>
+        <br>
+        
+        <div>
+            <label>Usmena ocjena studenta:</label><br>
+            <input type="radio" id="komunikativan" name="usmena_ocjena" value="komunikativan">
+            <label for="komunikativan">Komunikativan</label><br>
+            
+            <input type="radio" id="samostalan" name="usmena_ocjena" value="samostalan">
+            <label for="samostalan">Samostalan</label><br>
+            
+            <input type="radio" id="radisan" name="usmena_ocjena" value="radisan">
+            <label for="radisan">Radišan</label><br>
+            
+            <input type="radio" id="nista" name="usmena_ocjena" value="nista" checked>
+            <label for="nista">Ništa od navedenog</label>
+        </div>
+        <br>
+        
+        <table>
+            <tr>
+                <td><input type="submit" value="Pošalji"></td>
+            </tr>
+            <tr>
+                <td><input type="reset" value="Poništi"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
