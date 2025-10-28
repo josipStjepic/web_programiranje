@@ -1,0 +1,140 @@
+---------------html-----------------
+<div class="container">
+  <button class="btn-primary">Primarni gumb</button>
+  <button class="btn-secondary">Sekundarni gumb</button>
+  <button class="btn-success">Uspješan gumb</button>
+  
+  <div class="card main-card">
+    <h2>Naslov kartice</h2>
+    <p>Ovo je primjer teksta u kartici.</p>
+  </div>
+  
+  <div class="card secondary-card">
+    <h2>Druga kartica</h2>
+    <p>Još jedan primjer teksta.</p>
+  </div>
+</div>
+-------------------------------------
+---------------SCSS------------------
+// a) Tri varijable
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$main-font: 'Arial, sans-serif';
+
+// b) @extend primjer
+%card-base {
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px 0;
+  font-family: $main-font;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+// Stilovi koji koriste varijable i extend
+.container {
+  font-family: $main-font;
+  padding: 20px;
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px;
+  font-family: $main-font;
+  
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.btn-secondary {
+  background-color: $secondary-color;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px;
+  font-family: $main-font;
+  
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+  }
+}
+
+.btn-success {
+  @extend .btn-secondary; // b) Korištenje @extend
+  font-weight: bold;
+}
+
+.main-card {
+  @extend %card-base; // b) Korištenje @extend s placeholderom
+  background-color: lighten($primary-color, 40%);
+  border-left: 4px solid $primary-color;
+}
+
+.secondary-card {
+  @extend %card-base; // b) Korištenje @extend s placeholderom
+  background-color: lighten($secondary-color, 40%);
+  border-left: 4px solid $secondary-color;
+}
+----------------------------------------
+-----------------sass-------------------
+// a) Tri varijable
+$primary-color: #3498db
+$secondary-color: #2ecc71
+$main-font: 'Arial, sans-serif'
+
+// b) @extend primjer
+%card-base
+  padding: 20px
+  border-radius: 8px
+  margin: 10px 0
+  font-family: $main-font
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1)
+
+// Stilovi koji koriste varijable i extend
+.container
+  font-family: $main-font
+  padding: 20px
+
+.btn-primary
+  background-color: $primary-color
+  color: white
+  padding: 10px 20px
+  border: none
+  border-radius: 4px
+  margin: 5px
+  font-family: $main-font
+  
+  &:hover
+    background-color: darken($primary-color, 10%)
+
+.btn-secondary
+  background-color: $secondary-color
+  color: white
+  padding: 10px 20px
+  border: none
+  border-radius: 4px
+  margin: 5px
+  font-family: $main-font
+  
+  &:hover
+    background-color: darken($secondary-color, 10%)
+
+.btn-success
+  @extend .btn-secondary // b) Korištenje @extend
+  font-weight: bold
+
+.main-card
+  @extend %card-base // b) Korištenje @extend s placeholderom
+  background-color: lighten($primary-color, 40%)
+  border-left: 4px solid $primary-color
+
+.secondary-card
+  @extend %card-base // b) Korištenje @extend s placeholderom
+  background-color: lighten($secondary-color, 40%)
+  border-left: 4px solid $secondary-color
+-------------------------------------------------------------------------------------

@@ -1,0 +1,31 @@
+/* a) Tablica */
+table thead {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+}
+table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+table td {
+  font-style: italic; /* dodatna promjena po izboru */
+}
+
+/* b) Prvi paragraf u prvom odjeljku */
+.container > .row > .col-12 > p:first-of-type {
+  font-size: 1.2rem;
+  color: red;
+}
+
+/* c) Razmak između slika */
+img {
+  margin: 5px;
+}
+@media (max-width: 768px) {
+  img {
+    margin: 10px;
+  }
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Priroda</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="stil.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Gornji red: logo + h1 + h2 u istom redu -->
+  <div class="container-fluid py-3">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-2 text-center text-md-start mb-2 mb-md-0">
+        <img src="priroda.jpg" alt="Logo" class="img-fluid rounded-circle" style="max-height: 60px;">
+      </div>
+      <div class="col-12 col-md-10 d-flex flex-wrap align-items-center gap-3 text-center text-md-start">
+        <h1 class="mb-0">Naslov na stranici - </h1>
+        <h2 class="mb-0">Manji podnaslov</h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigacija -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Prva</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Druga</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Treća</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Četvrta</a></li>
+        </ul>
+      </div>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Sekcija Priroda -->
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-12">
+        <h3>Priroda</h3>
+        <p>
+          Priroda nas svakodnevno oduševljava svojom ljepotom i raznolikošću. Šetnja šumom pruža mir i povezanost s okolišem.
+          Zvuk ptica, šum lišća i svjež zrak stvaraju poseban ugođaj koji opušta um i tijelo. Planine, rijeke i jezera podsjećaju
+          nas na veličanstvenost prirode i njezinu važnost u našem životu. Čuvanje okoliša postaje sve značajnije u svijetu koji
+          se suočava s ekološkim izazovima. Svaka mala promjena, poput recikliranja ili smanjenja otpada, doprinosi očuvanju
+          prirode za buduće generacije i osigurava zdravu planetu za sve nas. Uz očuvanje prirode, važno je i promicanje održivog
+          načina života. To podrazumijeva smanjenje potrošnje plastike, upotrebu obnovljivih izvora energije te odgovorno
+          korištenje prirodnih resursa. Održivost ne znači samo zaštitu okoliša, već i izgradnju zajednica koje poštuju prirodne
+          procese i harmoniju života na zemlji. Edukacija o važnosti očuvanja prirode ključna je za razvoj svijesti, posebno među
+          mladim generacijama, koje će naslijediti ovaj planet. Na kraju, priroda nas podsjeća na to koliko smo međusobno
+          povezani – s biljkama, životinjama i planetom. Naš odnos prema prirodi oblikuje budućnost, pa je važno djelovati sada
+          kako bismo osigurali bolji svijet za sve vrste koje ga dijele.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slike -->
+  <div class="container mt-4">
+    <div class="row gx-0 gy-0 text-center">
+      <div class="col-12 col-md-4 p-1">
+        <img src="priroda.jpg" class="img-fluid rounded-circle" alt="Kružna slika">
+      </div>
+      <div class="col-12 col-md-4 p-1">
+        <img src="priroda.jpg" class="img-fluid" alt="Pravokutna slika">
+      </div>
+      <div class="col-12 col-md-4 p-1">
+        <img src="priroda.jpg" class="img-fluid rounded" alt="Zaobljena slika">
+      </div>
+    </div>
+  </div>
+
+  <!-- Tablica -->
+  <div class="container mt-4 mb-5">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Ime</th>
+          <th>Prezime</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hrvoje</td>
+          <td>Horvat</td>
+          <td>horvat@example.com</td>
+        </tr>
+        <tr>
+          <td>Marija</td>
+          <td>Marijanović</td>
+          <td>marija@example.com</td>
+        </tr>
+        <tr>
+          <td>Ivica</td>
+          <td>Ivić</td>
+          <td>ivica@example.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Mix and Match primjer -->
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-sm-6 col-md-4 col-lg-2 bg-success text-white p-3">Mali</div>
+      <div class="col-sm-6 col-md-8 col-lg-10 bg-warning p-3">Veliki</div>
+    </div>
+  </div>
+
+  <!-- Bootstrap element po izboru: Alert -->
+  <div class="container mb-5">
+    <div class="alert alert-info text-center" role="alert">
+      Hvala što posjećujete našu stranicu o prirodi!
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
