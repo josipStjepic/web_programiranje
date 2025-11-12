@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Niz prijevoznih sredstava - vježba</title>
+</head>
+<body>
+  <script>
+    var a = 1;
+    let b = 2;
+    const c = 3;
+
+    console.log(a);
+    console.log(b);
+    console.log(c);
+
+    a = 10;
+    b = 20;
+    // c = 30;
+
+    console.log(a);
+    console.log(b);
+    // console.log(c);
+
+    let tekst = "Ovo je prvi JS primjer";
+    console.log(tekst);
+
+    console.log(tekst.length);
+    console.log(tekst.toUpperCase());
+    console.log(tekst.replace("prvi", "zadnji"));
+
+  </script>
+
+  <h1>Ovo je niz prijevoznih sredstava</h1>
+  <script>
+    let vozilo = new Array(7);
+    vozilo[0] = "avion";
+    vozilo[1] = "auto";
+    vozilo[2] = "motor";
+    vozilo[3] = "bicikl";
+    vozilo[4] = "brod";
+    vozilo[5] = "motocikl";
+    vozilo[6] = "podmornica";
+
+    document.write("<p>");
+    for(let broj_vozila in vozilo){
+      document.write("Vozilo broj [" + broj_vozila + "]: " + vozilo[broj_vozila] + "<br>");
+    }
+    document.write("</p>");
+  </script>
+</body>
+</html>

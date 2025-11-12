@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<title>Validacija</title>
+<link rel="stylesheet" href="css.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script>
+function pozdrav() {
+    for (let i = 5; i > 0; i--) {
+        alert("Još " + i + " upozorenja do kraja!");
+    }
+}
+
+function kolegiji() {
+    let kolegiji = ["Matematika", "Programiranje", "Fizika", "Baze podataka", "Algoritmi", "Engleski", "Web dizajn", "Operacijski sustavi"];
+    document.getElementById("prezime").value = "";
+    for (let broj_kolegija in kolegiji) {
+        document.getElementById("prezime").value += "Kolegij broj [" + broj_kolegija + "]: " + kolegiji[broj_kolegija] + "\n";
+    }
+}
+
+function obriši() {
+    document.getElementById("prezime").value = "";
+}
+
+function kvadriraj() {
+    let broj = document.getElementById("broj").value;
+    let rezultat = document.getElementById("rezultat");
+    if (broj >= 1 && broj <= 10) {
+        rezultat.innerHTML = "Kvadrat broja je: " + (broj * broj);
+    } else {
+        rezultat.innerHTML = "Uneseni broj mora biti između 1 i 10!";
+    }
+}
+
+function provjeri() {
+    let ime = document.getElementById("ime").value.trim();
+    let tekst = document.getElementById("prezime").value.trim();
+    let email = document.getElementById("email").value.trim();
+
+    if (ime === "") {
+        alert("Molimo unesite ime i prezime!");
+        return;
+    }
+
+    if (tekst.length <= 30) {
+        alert("Tekstualno područje mora imati više od 30 znakova!");
+        return;
+    }
+
+    if (!validirajEmail(email)) {
+        return;
+    }
+
+    confirm("Vaše ime je " + ime.split(" ")[0] + ", vaše prezime " + ime.split(" ")[1] + ", vaša email adresa je " + email + ".");
+}
+
+function validirajEmail(email) {
+    let at = email.indexOf("@");
+    let tocka = email.lastIndexOf(".");
+
+    if (at < 2) {
+        alert("Email mora imati barem 2 znaka prije '@'.");
+        return false;
+    }
+    if (at === -1) {
+        alert("Email mora sadržavati '@'.");
+        return false;
+    }
+    if (tocka < at + 3) {
+        alert("Email mora imati barem 2 znaka nakon '@' i točku.");
+        return false;
+    }
+    if (tocka >= email.length - 2) {
+        alert("Email mora imati barem 2 znaka nakon točke.");
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body>
+
+<form>
+    <h1>Validacija</h1>
+    <button type="button" ondblclick="pozdrav()">Pozdrav</button><br><br>
+
+    <label>Ime i prezime:</label>
+    <input type="text" id="ime"><br><br>
+
+    <label>Polje za ispis:</label><br>
+    <textarea id="prezime" cols="50" rows="10">Mjesto za ispis kolegija.</textarea><br><br>
+
+    <button type="button" onmouseup="kolegiji()">Kolegiji</button>
+    <button type="button" onmouseover="obriši()">Obriši</button><br><br>
+
+    <label>Unesite broj:</label>
+    <input  id="broj" required>
+
+    <i class="fa-solid fa-question-circle"
+       onmouseover="document.getElementById('opis').style.display='inline'"
+       onmouseout="document.getElementById('opis').style.display='none'">
+    </i>
+    <button type="button" onclick="kvadriraj()">Kvadriraj</button><br><br>
+
+    <span id="opis" style="display:none;">
+        Uneseni broj mora biti između 1 i 10
+    </span><br><br>
+
+    <div id="rezultat">Ovdje će se ispisati rezultat.</div><br>
+
+    <label>Vaša e-mail adresa:</label>
+    <input type="text" id="email"><br><br>
+
+    <button type="button" onclick="provjeri()">Provjeri!</button>
+</form>
+</body>
+</html>
