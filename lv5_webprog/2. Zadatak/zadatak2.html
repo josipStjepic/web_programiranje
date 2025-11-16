@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Primjer JSON</title>
+</head>
+<body>
+  <script>
+    fetch("primjer.json")
+      .then(response => response.json())
+      .then(data => {
+        let original = JSON.parse(JSON.stringify(data));
+        console.log("Originalni podaci:", original);
+
+        data[1].ime = "Josip";
+        data[1].godina = 21;
+        data[1].redStudent = true;
+        data[1].najdraziKolegiji = ["Web programiranje", "Algoritmi", "Digitalne komunikacije"];
+
+        console.log("Izmijenjeni podaci:", JSON.parse(JSON.stringify(data)));
+
+        localStorage.setItem("mojObjekt", JSON.stringify(data[1]));
+
+        let dohvat = JSON.parse(localStorage.getItem("mojObjekt"));
+        console.log("Dohvaćeno iz localStorage:", dohvat);
+      })
+      .catch(error => console.error("Greška:", error));
+  </script>
+</body>
+</html>

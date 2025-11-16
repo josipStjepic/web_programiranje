@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadatak 4</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .zelena {
+      color: green;
+    }
+    img {
+      width: 150px;
+      margin: 10px;
+      transition: border 0.3s;
+    }
+    img:hover {
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Moja web stranica</h1>
+
+  <p>Ovo je lista mojih omiljenih filmova:</p>
+  <ul id="filmovi">
+    <li>Prvi film</li>
+    <li>Drugi film</li>
+    <li>Treći film</li>
+  </ul>
+
+  <p>Ovo je lista mojih omiljenih pjesama:</p>
+  <ul id="pjesme">
+    <li>Prva pjesma</li>
+    <li>Druga pjesma</li>
+    <li>Treća pjesma</li>
+  </ul>
+
+  <img id="slika1" src="https://pbs.twimg.com/profile_images/615533932554153984/4G1wROVn_400x400.jpg" alt="Slika 1">
+  <img id="slika2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Solid_yellow.svg/2048px-Solid_yellow.svg.png" alt="Slika 2">
+  <img id="slika3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Flag_of_Libya_%281977%E2%80%932011%29.svg/330px-Flag_of_Libya_%281977%E2%80%932011%29.svg.png" alt="Slika 3">
+
+  <br><br>
+  <button id="zelenaBtn">ZELENA</button>
+  <button id="abrakadabraBtn">Abrakadabra</button>
+
+  <script>
+    // c) 
+    $("#zelenaBtn").click(function() {
+      $("ul:first").addClass("zelena");
+    });
+
+    // d) 
+    $("img").click(function() {
+      $(this).hide();
+    });
+
+    // e) 
+    let faded = false;
+    $("#abrakadabraBtn").click(function() {
+      if (!faded) {
+        $("#slika1").fadeOut("fast");
+        $("#slika2").fadeOut("slow");
+        $("#slika3").fadeOut(5000);
+        faded = true;
+      } else {
+        $("#slika1").fadeIn();
+        $("#slika2").fadeIn();
+        $("#slika3").fadeIn();
+        faded = false;
+      }
+    });
+  </script>
+</body>
+</html>

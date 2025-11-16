@@ -1,0 +1,1 @@
+$("#paragraf").css("background-color", "yellow");

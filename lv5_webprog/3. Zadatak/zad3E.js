@@ -1,0 +1,1 @@
+$("#slika").attr("src", "https://www.novilist.hr/wp-content/uploads/2023/05/hills-2836301_960_720.jpg");

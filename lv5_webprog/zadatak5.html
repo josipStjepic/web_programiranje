@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<title>Zadatak 5</title>
+
+<!-- jQuery & jQuery UI CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+<style>
+  .kontejner {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+  }
+
+  .kontejner img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    cursor: move;
+  }
+</style>
+</head>
+<body>
+
+<h2>Najgluplja igra ikada!</h2>
+
+<div id="kontejner1" class="kontejner">
+    <p style="text-align: center;">Crno</p>
+    <img id="slika1" src="https://www.elgrad.hr/wp-content/uploads/2024/01/PET-MAT-CRNA.jpg" alt="Slika 1">
+</div>
+
+<div id="kontejner2" class="kontejner">
+    <p style="text-align: center;">Crveno</p>
+    <img id="slika2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0JgFOJW8njy_xd1hM55Kyu1dEE7qAnN3Clg&s" alt="Slika 2">
+</div>
+
+<script>
+$(function () {
+  $("#slika1").draggable({
+    containment: "#kontejner1"
+  });
+
+  $("#slika2").draggable({
+    containment: "#kontejner2"
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+$("#paragraf").text("Ovo je novi tekst u paragrafu.");
