@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sustav za rezervaciju putovanja</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>TravelGo</h1>
+    <p>Vaš sustav za jednostavne i brze rezervacije putovanja</p>
+  </header>
+
+  <!-- Navigacija -->
+  <nav>
+    <a href="#" id="loadTrips">Ponude</a>
+    <a href="#" id="showLogin">Prijava</a>
+    <a href="#" id="showRegister">Registracija</a>
+    <a href="#" id="showReservations">Moje rezervacije</a>
+  </nav>
+
+  <main>
+    <!-- Aside -->
+    <aside>
+      <h2>O nama</h2>
+      <p>TravelGo nudi razne destinacije i aranžmane. 
+         Naš cilj je omogućiti vam jednostavnu rezervaciju putovanja 
+         uz preglednu ponudu i sigurnu prijavu.</p>
+    </aside>
+
+    <!-- Dinamički prikaz putovanja -->
+    <section id="trips"></section>
+
+    <!-- Forma za prijavu -->
+    <section id="login" style="display:none;">
+      <h2>Prijava</h2>
+      <input id="loginEmail" placeholder="Email">
+      <input id="loginPass" type="password" placeholder="Lozinka">
+      <button id="loginBtn">Prijavi me</button>
+    </section>
+
+    <!-- Forma za registraciju -->
+    <section id="register" style="display:none;">
+      <h2>Registracija</h2>
+      <input id="regName" placeholder="Ime">
+      <input id="regEmail" placeholder="Email">
+      <input id="regPass" type="password" placeholder="Lozinka">
+      <button id="regBtn">Registriraj me</button>
+    </section>
+
+    <!-- Moje rezervacije -->
+    <section id="reservations" style="display:none;">
+      <h2>Moje rezervacije</h2>
+      <div id="reservationList"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 TravelGo - Sustav za rezervaciju putovanja</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

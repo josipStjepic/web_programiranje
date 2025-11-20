@@ -1,0 +1,11 @@
+backend/
+  api.php
+  db.php
+  config.template.php
+  config.php   <-- tvoja prava konfiguracija
+db/
+  model.sql
+frontend/
+  index.html
+  style.css
+  app.js
